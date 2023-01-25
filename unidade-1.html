@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<!--  Last Published: Tue Feb 04 2020 22:45:46 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e396a4192a3a5237b8600bf" data-wf-site="5e396a4192a3a524468600b8">
+<head>
+  <meta charset="utf-8">
+  <title>Unidade 1</title>
+  <meta content="Unidade 1" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/unianchieta.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Oswald:200,300,400,500,600,700","Bitter:400,700,400italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic","Roboto Slab:100,300,regular,700"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/pg/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/pg/webclip.png" rel="apple-touch-icon">
+  <meta name="author" content="">
+  <meta name="copyright" content="">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+ tex2jax: {inlineMath: [['\\(','\\)']]},
+ menuSettings:{ zoom: "Hover"}
+});
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+ MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"],
+   bcancel: ["Extension","cancel"],
+   xcancel: ["Extension","cancel"],
+   cancelto: ["Extension","cancel"]
+ });
+});
+</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+      var $z = jQuery.noConflict();
+      $z(document).ready(function() {
+          $z("#aumentar-fonte").click(function() {
+              var size = $z("#content").css('font-size');
+              size = size.replace('px', '');
+              size = parseInt(size) + 2;
+              $z("#content").animate({
+                  'font-size': size + 'px'
+              });
+              return false;
+          });
+          $z("#diminuir-fonte").click(function() {
+              var size = $z("#content").css('font-size');
+              size = size.replace('px', '');
+              size = parseInt(size) - 2;
+              $z("#content").animate({
+                  'font-size': size + 'px'
+              });
+              return false;
+          });
+      });
+  </script>
+  <style>
+      
+/*cores das titulo-linha no richtext por unidade*/
+.texto-box.w-richtext>h1::before,
+.texto-box.unidade2.w-richtext>h2::before,
+.texto-box.unidade3.w-richtext>h2::before,
+.texto-box.unidade4.w-richtext>h2::before{
+  content:"";
+  display:flex;
+  width: 80px;
+  height: 3px;
+  max-width: 20%;
+  min-height: auto;
+  min-width: 80px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  background-image: linear-gradient(45deg, #29a1c9 13%, #2a419a);
+}
+      
+/* estilo padrao das tabelas nos conteudos*/
+table {
+    width: 100%;
+}
+
+table,th,td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+      
+th,td {
+    padding: 14px;
+    text-align: left;
+}
+th{
+    font-size: 1em;
+          
+      }
+      
+td {
+    font-weight: 400; 
+    vertical-align: top;
+    font-size: 0.9em;
+    text-align: justify;
+}
+      
+table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+      
+table tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+      
+table th {
+    background-color: #2a419a;
+    color: white;
+}
+      
+/* Esconder a tag <br> criada no cabeÃ§alho */
+h1.capa-aula-titulo > br{
+  display:none;
+}
+.texto-box.w-richtext figcaption>a {
+    color:#ffffff !important;
+  }
+      
+      
+        /* ------------------------------*/    
+        /*   NOMES DISCIPLINA/UNIDADES   */
+        /* ------------------------------*/
+      
+      
+  .var-titulo-introducao01::before,
+  .var-titulo-introducao02::before,
+  .var-titulo-introducao03::before,
+  .var-titulo-introducao04::before,
+  .var-disciplina::before {
+  content: "Administração de Salários Diretos e Indiretos";    /* NOME DA DISCIPLINA */
+  }
+  .var-titulo-introducao01::after,
+  .var-unidade01::after {
+  content: "Salários";    /* TITULO UNIDADE 1 */
+  } 
+  .var-titulo-introducao02::after,
+  .var-unidade02::after {
+	content: "Salários Diretos";
+  } 
+  .var-titulo-introducao03::after,
+  .var-unidade03::after {
+	content: "Salários Indiretos";
+  } 
+
+      
+      
+      
+  body { -webkit-print-color-adjust: exact;}
+  @media print {
+    body {
+    padding:0;
+    line-height: 22px;
+    font-size: 18px;
+    }
+    .texto-box.w-richtext p {
+      font-size: 18px !important;
+      line-height: 22px;  
+    }
+    .nav-bar.ghost-nav-bar, .proxima-unidade, .rodape, .seta-topo {
+      display: none;
+    }
+    .section-conteudo, .section-conteudo.color {
+      background: none;
+      background-color: transparent;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    } 
+    .header-capa-aula {
+      min-height: 400px !important;
+      background-image: none !important;
+      background-color: #9e161d !important;
+    }
+    .page-break {
+      page-break-before: always; 
+    }
+    .legenda-imagem {
+     text-align: center; 
+    }
+    /* infograficos _________________________________________ */
+    .infografico-aviso {
+      display: block;
+      page-break-inside: avoid;
+    }
+    .infografico-box {
+     display: none; 
+    }
+     /* elementos de apoio - wrapper _________________________________________ */
+    .box-elemento {
+    	page-break-inside: avoid;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: none !important
+    }
+    /* elementos de apoio - section ________________________________________ */
+    .icone-caixa {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+}
+@page {
+   margin-top: 2cm;
+   margin-left: 1cm;
+   margin-bottom: 2cm;
+   margin-right: 1cm;
+  }
+</style>
+</head>
+
+<body class="body">
+  <div class="font-size-ajuste"><a id="aumentar-fonte" href="#" class="btn-font-size w-button">A+</a><a id="diminuir-fonte" href="#" class="btn-font-size w-button">A-</a></div>
+  <div data-collapse="all" data-animation="default" data-duration="450" class="nav-bar ghost-nav-bar w-nav">
+    <div class="navbar-wrapper"><a data-ix="logo" href="index.html" class="logo-link w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" height="40" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="(max-width: 479px) 57vw, 150px" alt="" class="logo"></a>
+      <div class="titulo-disciplina cor var-disciplina"></div>
+    </div>
+    <div class="w-embed">
+      <?xml version="1.0" encoding="utf-8"?>
+      
+      <!-- LINK DOWNLOAD PDF -->
+      <form action="documents/unidade1.pdf" method="get" target="_blank">
+          <button type="submit" style="background-color: transparent !important; padding-top: 15px;">
+              <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30" viewbox="0 0 30.1 26.1" style="enable-background:new 0 0 30.1 26.1;" xml:space="preserve">
+                  <style type="text/css">
+                      .st0 {fill: transparent;}
+                      .st1 {fill: #FFFFFF;}
+                  </style>
+                  <rect x="0" class="st0" width="30.1" height="26.1"></rect>
+                  <title>Fazer o download da Unidade 1</title>
+                  <g>
+                      <g id="Camada_1-2">
+                          <g id="Camada_1-2-2">
+                              <rect x="9.5" class="st1" width="11.2" height="4.1"></rect>
+                              <polygon class="st1" points="20.6,5.5 9.5,5.5 9.5,9.2 4.8,9.2 9.9,14.2 15.1,19.2 20.2,14.1 25.3,9.1 20.6,9.1 			">
+                                  <path class="st1" d="M26.3,17.7c0,3.8-0.6,4.7-4.2,4.7H7.9c-3.7,0-4.2-0.3-4.2-4.7v-1.7H0v4.4c0,3.1,2.5,5.5,5.5,5.5c0,0,0,0,0,0
+                    h19c3.1,0,5.5-2.5,5.5-5.5c0,0,0,0,0,0v-4.5h-3.8V17.7z"></path>
+                              </polygon>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+          </button>
+      </form>
+    </div>
+    
+    <div data-ix="menu-button" class="menu-button white-menu-button w-nav-button">
+        <div class="menu-icon">
+            <div class="menu-line menu-top-line"></div>
+            <div class="menu-line menu-middle-line-1"></div>
+            <div class="menu-line menu-middle-line-2"></div>
+            <div class="menu-line menu-bottom-line"></div>
+        </div>
+    </div>
+    
+    <nav role="navigation" class="full-screen-menu w-nav-menu"><a href="#" data-ix="logo" class="logo-link full-screen-logo w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" width="125" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="100vw" alt="" class="logo"></a>
+        <div class="full-screen-menu-list">
+            <div class="links-menu w-row">
+                <div class="w-col w-col-4"></div>
+                <div class="w-col w-col-4">
+                    <div class="nav-bloco"><a href="index.html" class="titulos-nav-link w-nav-link">Início</a><a href="introducao.html" class="titulos-nav-link w-nav-link">Introdução</a><a href="unidade-1.html" class="titulos-nav-link var-unidade01 w-nav-link w--current"></a><a href="unidade-2.html" class="titulos-nav-link var-unidade02 w-nav-link"></a><a href="unidade-3.html" class="titulos-nav-link var-unidade03 w-nav-link"></a><a href="questoes-u1.html" class="titulos-nav-link w-nav-link"><strong>Atividades</strong></a><a href="referencias-uia1.html" class="titulos-nav-link w-nav-link"><strong>Referências</strong></a></div>
+                </div>
+                <div class="menu w-col w-col-4">
+                    <div class="nav-bloco"></div>
+                </div>
+            </div>
+            <div class="titulo-disciplina-nav var-disciplina"></div>
+        </div>
+    </nav>
+  </div>
+     
+      <div class="header-capa-aula _1">
+          <div class="capa-unidade-container w-container">
+              <div class="capa-unidade-info">
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a146" style="opacity:0;-webkit-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="capa-unidade-numero">Unidade 1</div>
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a148" style="-webkit-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;" class="linha-topo1"></div>
+                  <h1 data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a149" style="opacity:0" class="capa-unidade-titulo var-unidade01"><br></h1>
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14b" style="-webkit-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;" class="linha-topo1"></div>
+              </div>
+          </div><a href="#introducao" class="w-inline-block"><img src="https://uploads-ssl.webflow.com/5b5e20e889ff9ca3a224d3a6/5b5ef9ec2461b3f88a5d28fe_slider-arrow-left-icon.svg" alt="Selecione a seta para iniciar o conteúdo" data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14c" style="-webkit-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-moz-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-ms-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);opacity:0;transform-style:preserve-3d" class="seta-topo"></a>
+      </div>
+      <div id="content" class="conteudo-geral">
+    
+     <!-- INICIO INTRODUCAO -->    
+	 
+     <section id="introducao" class="section-conteudo color">
+         <div class="container-conteudo w-container">
+             <div class="texto-box w-richtext">
+         
+                <h1 data-ix="fade-right">Introdução</h1>
+                 
+				<p>Esta unidade irá expressar de forma direta e objetiva a contextualização relacionada ao salário em seu sentido quantitativo e qualitativo, apresentando seu conceito, definição e suas formas de pagamentos. Espera-se que o discente entenda este conceito e saiba identificar o salário como fator motivador, seja este direto ou indiretamente, bem como perceber os adicionais que compõem um sistema de remuneração, em que o salário é componente deste. Além disso, visa nortear o pensamento e decisão dos futuros gestores de remuneração nas particularidades que envolvem tal gestão, seus benefícios e possíveis desvantagens, estas conforme cenário ou ambiente que a organização e seus colaboradores estiverem situados.</p>
+				
+				<!-- INICIO FIGURA 1 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-1.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Ilustração para administração de salários diretos e indiretos<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa três homens, com traje social e com desenhos no lugar do rosto: uma lâmpada, um cifrão e uma engrenagem, respectivamente. Ao entorno deles, ilustrações sobre desenvolvimento de processos e pessoas.</div>
+                </div>
+				
+                <!-- FIM FIGURA 1 -->
+				
+				<p>O salário é associado à produtividade de um trabalhador, mesmo que tal relação possa ser questionada pelas partes envolvidas. A figura do salário partilha com o próprio trabalho o encanto pessoal maior existente na relação de emprego.</p>
+				
+                <h2 data-ix="fade-right">Objetivo específicos de aprendizagem</h2>
+				
+				<ul>
+					<li>Apresentar como o salário pode ser considerado fator motivador, direta e indiretamente. Entender o conceito, definição e as formas de pagamentos dos salários.</li>
+					<li>Conhecer os tipos de salário</li>
+					<li>Identificar o que pode ser considerado como adicionais ao salário.</li>
+				</ul>
+
+            </div>
+         </div>
+     </section>
+	 
+     <!-- FIM INTRODUCAO -->    
+    
+	
+    <!-- INICIO CONTEUDO SEÇÃO 1 -->
+	
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+              
+                <h2 data-ix="fade-right">1. Salário e motivação</h2>
+				
+				<p>Ao relacionar os efeitos motivacionais na composição do salário, muitos estudiosos questionam a efetividade de um sistema de remuneração na melhora do desempenho individual e coletivo de um colaborador. Embora a maioria destes acreditem na influência da remuneração na motivação dos funcionários, ainda há fortes controvérsias.<p>
+				<p>Para <i>Ivancevich</i> (2011), a motivação consiste no conjunto de atitudes e valores que predispõe o indivíduo a agir de modo específico, voltado a alguma meta. Um estado interno invisível que impulsiona o comportamento humano direcionado a algum objetivo, e pode ser dividido em: (1) a direção do comportamento (trabalhar para atingir a meta); e (2) a intensidade do comportamento (o esforço e o emprenho com que o indivíduo trabalha).  Barbosa, Ilanez e Giacomelli (2018) afirmam que o salário é toda contraprestação ou vantagem paga em dinheiro ou utilidade conferida diretamente pelo empregador ao empregado em consequência do acordo de trabalho ou contrato de trabalho celebrado entre patrão e empregado.</p>
+	
+				<!-- início popup SAIBAMAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+				
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction1()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup1">
+						<h3>Saiba Mais</h3>
+						<p>Saiba mais sobre a relação salário e motivação pela leitura do artigo do RH Portal:<br>Acesse:<a href="https://www.rhportal.com.br/artigos-rh/salrio-e-motivao/" target="_blank"> https://www.rhportal.com.br/artigos-rh/salrio-e-motivao/</a></p>
+					</span>
+                </div>
+               
+			   <!-- fim popup SAIBAMAIS -->
+			   
+			   <p>A relação entre salário e motivação é norteada na busca de alternativas por parte das organizações para atrair e reter seus talentos. De acordo com Bez e Oliveira (2018), as organizações, pensando de forma estratégica, focadas nos resultados que pretendem atingir, investem em formatos que tornem seus colaboradores mais satisfeitos, consequentemente, motivados com o que fazem. A ideia é que estes se sintam recompensados pelo seu desempenho superior ou apresentarem um nível de competência diferenciado naquilo que realizam em seus cargos. Um exemplo prático de tal relação é o modelo de remuneração por competências, em que a diferencia da prática tradicional de remuneração ou salário é que conforme as competências do colaborador, maior ou melhor será sua compensação.</p>
+			   
+			   <h2 data-ix="fade-right">1.1 Conceito de Salário</h2>
+			   
+			   <p>De acordo com Bez e Oliveira (2018), salário é a paga recebida de outrem como liquidação do serviço prestado, contido dentro do sistema conhecido como remuneração fixa. Por isso, utiliza-se a expressão remuneração como se tivesse o mesmo conteúdo de salário. O salário será toda a contraprestação ou vantagem paga em dinheiro ou utilidade conferida diretamente pelo empregador ao empregado em consequência do acordo de trabalho, em que esse pagamento é efetuado pelos serviços e pelo tempo que o empregado permaneceu à disposição do empregador.</p>
+			   <p>Barbosa, Ilanez e Giacomelli (2018) afirmam que o estudo da constituição do salário desvenda a presença de distintas parcelas pagas diretamente pelo empregador ao empregado como forma de recompensa pelo contrato empregatício assinado. A verba salarial paga ao obreiro em detrimento da relação de emprego não se exaure na verba contra prestativa fixa principal paga mensalmente pelo empregador.</p>
+		
+			   <!-- INICIO FIGURA 2 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-2.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Pagamento de salário<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa a figura de uma mulher branca, em traje social na cor azul marinho, apontando com sua mão direita segurando várias notas de dinheiro. Representa estar realizando o pagamento de algo.</div>
+                </div>
+				
+                <!-- FIM FIGURA 2 -->
+				
+				<p>Para <i>Ivancevich</i> (2011), salário é o pagamento calculado por ano ou por mês, ajustado por quatro formas de aumentos salariais:<br></p>
+				<ul>
+					<li>Aumento geral para todos os funcionários;</li> 
+					<li>Aumento por mérito para alguns funcionários;</li>
+					<li>Ajuste de custo de vida com base no índice de preço ao consumidor; e</li>
+					<li>Ajuste por tempo de serviço (senioridade).</li>
+				</ul>	
+				<p>Este último é composto por parcelas salariais e não salariais. As parcelas salariais são as pagas em recompensa aos trabalhos efetuados pelo trabalhador, podendo ser efetuadas pelo empregador sob a forma de salário base e seus complementos ou por terceiros sob a forma de gorjetas. Salário base é o valor acertado entre empregador e empregado no momento da constituição do contrato de trabalho, caracterizando assim a remuneração básica do trabalhador. Os complementos pagos pelo empregador têm como embasamento leis, regulamentos e a negociação coletiva de trabalho, como exemplo o adicional noturno. Já os acréscimos legais seriam os prêmios, gratificações adicionais, as comissões e as porcentagens.</p>
+				
+				<!-- INICIO SANFONA SEM IMAGEM -->
+				
+                <div class="bg-infografico-un1 w-container">
+                    <p class="introinfografico"></p>
+                    <div class="div-block-15">
+					
+                        <div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Salário</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É a totalidade das percepções econômicas dos trabalhadores, qualquer que seja a forma de pagamento, quer retribua o trabalho efetivo.</p>
+                            </div>
+                        </div>
+						<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Remuneração</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É a totalidade dos ganhos do empregado decorrentes do vínculo empregatício, pagos diretamente ou não pelo empregador.</p>
+                            </div>
+                        </div>
+						<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Encargos</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É a taxa que se paga ao Estado ou se recebe quando se é trabalhador; imposto, tributo: encargos trabalhistas.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+				
+                <!-- FIM SANFONA SEM IMAGEM -->
+				
+				<p>As parcelas não salariais correspondem à onerosidade do contrato empregatício que se manifesta objetivamente por meio do recebimento pelo empregado de um conjunto de parcelas econômicas retributivas da prestação de serviços ou retributivas face à simples existência da relação de emprego. O salário-família, a participação nos lucros ou resultados da empresa, o abono pecuniário de férias, o vale-transporte, entre outros são exemplos de parcelas não salariais.</p>
+				
+				<h2 data-ix="fade-right">1.2 Definição de salário</h2>
+				
+				<p>O estudo da constituição do salário desvenda a presença de distintas parcelas pagas diretamente pelo empregador ao empregado como forma de recompensa pelo contrato empregatício assinado. Segundo <i>Ivancevich</i> (2011), a maioria dos empregadores paga salários diferentes para funcionários que ocupam o mesmo cargo, onde esta distinção é baseada em:<br>
+				<ul>
+					<li>Diferenças individuais em termos de experiência, qualificação e desempenho; e</li> 
+					<li>Expectativas de que funcionários com mais tempo de serviço, melhor desempenho ou ambos merecem ser mais bem remunerados.</li>
+				</ul>
+				
+				<!-- INICIO FIGURA 3 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-3.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Tipos de remuneração e sua composição<br>Fonte: Adaptado de Bez e Oliveira (2018).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Uma tabela com duas colunas e três linhas. A primeira coluna, os termos aparecem na seguinte ordem: “Tipo de remuneração”, “Fixa”, “Variável” e “Estratégica”. Na segunda coluna, a composição ou significado de cada termo conforme linha, respectivamente: Salários; Benefícios (assistenciais, recreativos, de serviços etc.); Bônus; Participação nos lucros e resultados; Percentual por atingimento de metas; Percentual por vendas realizadas; Outros; Remuneração por habilidades (<i>skill Based pay</i> – SBP); Remunerações por competência (<i>Pay for professional skill</i>); Remuneração acionária (<i>Stock ownership</i>); Distribuição de ganhos (<i>Gain Sharing</i>); Remuneração por resultados (<i>Pay-for-performance</i>).</div>
+                </div>
+				
+                <!-- FIM FIGURA 3 -->
+				
+				<p>De acordo com Bez e Oliveira (2018), a definição de salário é composta pelas formas de remuneração e sua composição: remuneração fixa; remuneração variável; e remuneração estratégica. A remuneração fixa é a liquidação total do serviço prestado, utilizada pela maioria das empresas quando estas ajustam suas estruturas de cargos e salários por um sistema de pontos, sendo representada pela remuneração fixa; salário fixo; abonos (diversos); benefícios; e bônus (diversos). São relacionados ao reconhecimento, às promoções, aos prêmios, entre outras retribuições oferecidas em função do desempenho individual do colaborador.</p> 
+				<p>Já a remuneração variável é todo sistema remunerativo cujo valor final varia em conformidade às metas alcançadas, sejam elas de caráter quantitativo ou qualitativo. É uma forma de estimular que os funcionários alcancem tais metas e atinjam o mínimo para receber os valores ou prêmios estabelecidos anteriormente pelos gestores da empresa. Enquanto a remuneração estratégica é um misto de todas as formas disponíveis atualmente, ou seja, a remuneração fixa propriamente dita, os benefícios e as demais vantagens oferecidas pela organização: a remuneração por competências ou habilidades, a remuneração variável, a remuneração por resultados e outras formas. Esta faz com que os funcionários sejam considerados em concordância com um conjunto de fatores que possuem e que podem influenciar diretamente os resultados oferecidos às organizações.</p>
+
+				<!-- INICIO FIGURA 4 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-4.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Termos utilizados na estrutura salarial<br>Fonte: Adaptado de Bez e Oliveira (2018).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Uma tabela com duas colunas e sete linhas. A primeira coluna, os termos aparecem na seguinte ordem: “Termo”, “Salário máximo do grau”, “Salário-mínimo do grau”, “Salário médio do grau, “Grau”, “Faixa salarial”. Na segunda coluna, o conceito ou significado de cada termo conforme linha, respectivamente: é o valor máximo de salário que um colaborador irá receber em determinado grau; é o valor mínimo a ser recebido de salário em determinado grau; é o valor médio entre o salário máximo e o salário mínimo de cada grau; é o resultante de um agrupamento de cargos equivalentes e que terão o mesmo tratamento salarial; corresponde à diferença monetária entre o salário máximo e o salário mínimo do grau; corresponde a cada valor intermediário entre o mínimo e o máximo da faixa salarial de cada grau.</div>
+                </div>
+				
+                <!-- FIM FIGURA 4 -->
+
+				<p>Mesmo com todas estas definições, muitos ainda confundem salário com remuneração. De acordo com Barboza, Ilanez e Giacomelli (2018), salário se refere à contraprestação devida ao empregado pela prestação de serviços em decorrência de um contrato de trabalho firmado entre as partes. Já a remuneração é a soma do salário contratualmente estipulado (mensal, por hora, por tarefa etc.) a outras vantagens percebidas na vigência do contrato de trabalho, como horas extras, adicional noturno, adicional de periculosidade, insalubridade, comissões, percentagens, gratificações, diárias para viagem etc.</p>
+
+				<h2 data-ix="fade-right">1.3 Formas de pagamentos dos salários</h2>
+				
+				<p>Barbosa, Ilanez e Giacomelli (2018) classificam as formas de pagamentos dos salários em três modalidades, denominadas tipos de salários: salário por unidade de tempo; salário por unidade de obra; e salário-tarefa.</p>
+				
+				<!-- início popup CURIOSIDADE / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+				
+                <div class="popup curiosidades square" data-ix="fade-up-1" onclick="myFunction2()" >Curiosidade
+                    <span class="popuptext curiosidades text" id="myPopup2">
+						<h3>Curiosidade</h3>
+						<p>Por Lei, o pagamento de salário deve ser feito em espécie, ou seja, em dinheiro, na moeda corrente nacional. Contudo, com a edição da portaria n. 3.281/1984 do Ministério de Economia, passou a ser aceito o recebimento de salário por cheque e por depósito bancário, desde que seguidas algumas disposições legais e aceito pelo trabalhador.</p>
+					</span>
+                </div>
+               
+			   <!-- fim popup SAIBAMAIS -->
+				
+			   <p>O salário por unidade de tempo é computado com base na duração do serviço prestado ou, em outras palavras, da duração do trabalho e da própria disponibilidade obreira perante o empregador, onde o período de trabalho colocado à disposição do empregador (hora, dia ou mês) desponta como instrumento de aferição do salário. Esse tipo salarial é o que melhor se materializa no plano da relação de emprego.</p>
+
+			   <!-- INICIO FIGURA 5 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-5.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Salário por unidade de tempo<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa a figura de uma mulher branca, em traje social preto, apontando e segurando um relógio de corda. Na frente deles, sobre uma mesa, moedas de dinheiro empilhadas em ordem crescente da esquerda para direita.</div>
+                </div>
+				
+                <!-- FIM FIGURA 5 -->
+				
+				<p>O salário por unidade de obra utiliza como premissa a produtividade do empregado, que é o critério essencial ao seu cálculo pactuado, independente do tempo de trabalho despendido pelo empregado ou do tempo à disposição do empregado. É calculado em base ao número de quantidades produzidas ou serviços prestados, recebendo cada produto ou serviço realizado um valor previamente fixado entre empregador e empregado. Assim, o somatório produtivo, multiplicado pelo valor unitário, permite o total do salário mensal do obreiro.</p>
+				<p>Já o salário por tarefa é medido por meio de uma fórmula combinada entre os critérios de unidade produzida ou serviço ofertado e tempo gasto. Por esse sistema, caso o trabalhador atinja a meta de produção em menor número de dias da semana, este pode ser liberado nos dias restantes, garantido o salário padrão fixado; ou determinar a realização de trabalho extra ao tempo disponível, pagando-se acréscimo ao salário por produção ou serviço extra.</p>
+
+				<h2 data-ix="fade-right">2. Tipos de salários</h2>
+				
+				<p>A opção por adotar uma remuneração fixa ou variável, ou ainda a combinação de ambas, é uma decisão importante para um sistema de remuneração em qualquer negócio, geralmente predominante nas empresas brasileiras a prática do salário fixo para funções operacionais ou táticas, com pagamento mensal ou por hora; e variável para cargos executivos e de vendedores.</p> 	
+				<p>Além disso, colabora nessa escolha o desempenho do colaborador de forma individual ou coletiva, bem como o tempo de empresa, aspectos inerentes ao cargo, o perfil profissional, os critérios individuais ou coletivos predominantes na escolha do tipo de provento a ser pago, e o posicionamento da empresa em relação a seus concorrentes em relação a salário, benefícios e incentivos.</p>
+
+				<h2 data-ix="fade-right">2.1 Salário direto</h2>
+
+				<p>Classificado como salário básico, é o valor pago somente em dinheiro (simples) ou em dinheiro e utilidades (composto), formado pelo salário base (valor acertado entre empregador e empregado no momento da constituição do contrato de trabalho) somado ao salário <i>in natura</i>.</p>
+
+				<!-- INICIO FIGURA 6 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-6.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Ilustração para salário <i>in natura</i> - roupas<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa uma loja, onde há uma prateleira com produtos e uma “arara” de camisetas, com cabides e camisetas modelo polo de cores diversas, todas vibrantes. As roupas ilustram a modalidade pagamento <i>in natura</i></div>
+                </div>
+				
+                <!-- FIM FIGURA 6 -->
+
+				<p>O salário direto é constituído pelo salário básico com o salário <i>in natura</i></p>
+				
+				<h2 data-ix="fade-right">2.2 Salário indireto</h2>
+
+				<p>O salário indireto, também denominado como parcelas contra prestativas, são todos os benefícios que completam a remuneração do colaborador em uma empresa, segundo Barbosa, Ilanez e Giacomelli (2018). São instituídos pela vontade unilateral do empregador ou bilateral das partes; parcelas econômicas pagas ao trabalhador sem caráter salarial; que não integram o salário do trabalhador e, dessa forma, não exercem o efeito expansionista circular típico dos salários diretos. Para <i>Ivancevich</i> (2011), salário indireto é a recompensa ou auxílio concedido pelo empregador na forma de:</p>
+				<ul>
+					<li>Pagamento obrigatório por lei de seguridade social, seguro privado e plano de aposentadoria;</li>
+					<li>Remuneração de horas não trabalhadas;</li>
+					<li>Pagamento extra por desempenho, exceto bônus; e</li>
+					<li>Custos de serviços subsidiados, como refeitório ou vale-refeição, uniformes etc.</li>
+				</ul>
+				<p>A finalidade do salário indireto é ressarcir eventuais gastos na realização do serviço, reparar prejuízos causados pelo empregador ou funcionar como penalidade.
+
+				<h2 data-ix="fade-right">2.3 Salário <i>in natura</i></h2>
+	
+				<p>Barbosa, Ilanez e Giacomelli (2018) definem salário in natura como a forma diversa do pagamento em espécie, em dinheiro. É uma possibilidade de remuneração de uma parte do salário mensal de um trabalhador. A lei limita quais são os tipos de utilidades que podem ou não substituir parte do salário mensal (Brasil).  Integra o salário pago em utilidades, que podem ser itens de alimentação, vestuário, entre outros, sendo vedado o pagamento desta natureza. </p>
+				
+				<h2 data-ix="fade-right">3. Adicionais ao salário</h2>
+				
+				<p>Entre os diversos tipos de adicionais que compõem o salário ou remuneração de um trabalhador, evidencia-se neste tópico as horas extras; adicional de insalubridade; e periculosidade.</p>
+				
+				<h2 data-ix="fade-right">3.1 Hora extra</h2>	
+				
+				<p>Para Barbosa (2018), hora extra corresponde à jornada de trabalho extraordinária ou suplementar, que equivale à prestação de serviços, além do horário normal ou comum de trabalho, acordado entre as partes. Pode ser paga em espécie, acrescida em 50% no valor/hora do trabalho normal; 100% em domingos e feriados.</p>
+				
+				<!-- Ínicio conteúdo de DESTAQUE -->
+				
+				<blockquote>O artigo 59 da CLT (Consolidação das leis trabalhistas) determina que a duração normal do trabalho poderá ser acrescida de horas extras, caso necessário, em número não excedente de 2 (duas), mediante acordo escrito entre empregador e empregado, ou mediante contrato coletivo de trabalho.</blockquote>
+							
+
+				<!-- Final conteúdo de DESTAQUE -->
+				
+				<p>Algumas classes de trabalhadores não recebem hora extra conforme convenção coletiva de trabalho firmada; ou compensada conforme regime do banco de horas.</p>
+				
+				<h2 data-ix="fade-right">3.2 Insalubridade</h2>
+				
+				<p>De acordo com <i>Ivancevich</i> (2011), insalubridade constitui aspectos do ambiente de trabalho que lenta e cumulativamente (muitas vezes de forma irreversível) provocam a deterioração da saúde, em que o trabalhador pode desenvolver uma doença crônica ou fatal e, até mesmo, ficar permanentemente inválido. As causas mais comuns são os riscos físicos e biológicos, as substâncias químicas, poeiras cancerígenas e tóxicas e as condições de trabalho estressantes.</p> 
+				<p>A compensação salarial por ambiente insalubre varia de 10 a 40% de acréscimo no salário base do trabalhador, índice baseado no salário-mínimo nacional vigente (Brasil).</p>
+
+				<h2 data-ix="fade-right">3.3 Periculiosidade, entre outros</h2>
+				
+				<p>De acordo com <i>Ivancevich</i> (2011), periculosidade envolve aspectos do ambiente de trabalho potencialmente causadores de lesões ou mesmo morte imediata e, algumas vezes, violenta.  Um trabalho periculoso é caracterizado por atividades que colocam em perigo a vida do trabalhador. Em caso de perigo, o tempo de exposição não é levado em conta, uma vez que as atividades perigosas podem ser fatais em minutos. A compensação salarial por ambiente perigoso é fixada em 30% do salário base do trabalhador, independentemente do valor fixado.</p>
+				<p>Além da periculosidade ou insalubridade, outros fatores são causadores de acidentes ou doenças ligadas ao trabalho:</p>
+				<ul>
+					<li>O trabalho em si;</li>
+					<li>As condições de trabalho; e</li>
+					<li>A natureza do trabalhador.</li>
+				</ul>
+				<p>O quadro a seguir exemplifica funções e a associação da periculosidade ou insalubridade aos trabalhadores de escritório.</p>
+				
+				<!-- INICIO FIGURA 7 -->
+			   
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-7.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Riscos em potencial versus possível consequência – atividade insalubre ou perigosa<br>Fonte: <i>Ivancevich</i> (2011).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>O quadro traz, em três colunas, os riscos potenciais e possível consequência de atividades insalubres ou perigosas aos “Trabalhadores de escritório”. A primeira coluna tem como termos “Ocupação” e “Trabalhadores de escritório”; a segunda coluna evidencia os riscos em potencial, como: cadeiras e estações de trabalho projetados de forma inadequada; falta de movimento; ruído; exposição a substâncias químicas; ozônio das máquinas copiadoras; benzeno e tolueno de cola de borracha e “agentes de limpeza”; Metanol e amônia de solventes de máquinas copiadoras; e a terceira coluna as possíveis consequências, como: atua como anestésico; dor lombar; agravamento das hemorroidas, aparecimento de varizes e outros quadros circulatórios; fadiga visual; Incapacidade auditiva, reação de estresse; Irritação de olhos, nariz e garganta; dificuldade respiratória; O benzeno está associado a diversas doenças sanguíneas (inclusive leucemia), e o tolueno pode causar intoxicação; Irritação de olhos, nariz e garganta.</div>
+                </div>
+				
+                <!-- FIM FIGURA 7 -->
+
+            </div>
+        </div>
+    </section>
+     
+    <!-- INICIO CONSIDERAÇÕES FINAIS -->
+	
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Considerações Finais</h1>
+                
+				<p>Como ciência de gestão, a administração de salários, sejam estes diretos ou indiretos, demonstram incialmente ser uma prática comum nas organizações, presente em qualquer tipo de negócio ou relação que envolva oferta de trabalho e sua compensação. Um sistema de remuneração, como se conhece, componente do subsistema de compensação da administração de recursos humanos, é composto por política salarial e seus complementos, até por isso muitos ainda confundem salário com remuneração.</p> 
+				<p>Evidenciar as particularidades que envolvem o salário e suas consequências perante trabalhadores e organizações deve ser uma atividade relacionada diretamente com a realidade do contexto organizacional e uso de novas tecnologias de compensação, mesmo tendo como matéria-prima a essência do verbo associado a palavra salário: pagar; e sua gestão deve ser estratégica para o negócio, respeitando a legislação e gerando proventos à sociedade como um todo.</p>
+				
+		   </div>
+        </div>
+    </section>
+	
+    <!-- FIM CONSIDERAÇÕES FINAIS -->
+
+            <!-- INICIO VIDEO DE RESUMO -->
+          
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Resumo da Unidade</h1>
+                
+                <p>Agora que você concluiu a leitura do conteúdo. assista a seguir a videoaula com o resumo da unidade:</p>
+                
+                <!-- INICIO VIDEO VIMEO -->
+                <div style="padding-top:56.27659574468085%" id="w-node-a02e1f5e1ea1-7b8600bf" class="w-video w-embed" data-ix="fade-left"><iframe class="embedly-embed" src="https://player.vimeo.com/video/551477638/" scrolling="no" title="Vimeo embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div>
+                <!-- FIM VIDEO VIMEO -->
+
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- INICIO ATIVIDADES UNIDADE 1 -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                <h1 data-ix="fade-right" >Atividades Unidade I</h1>
+
+                <!-- Atividade 1 -->
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 1</h2>
+                        <p>Ao elucidar a contextualização sobre salário, este é classificado em três graus: mínimo; médio; e máximo. O salário em grau mínimo refere-se ao valor mínimo a ser recebido de salário em determinado grau (agrupamento de cargos equivalentes e que terão o mesmo tratamento salarial). Já o salário em grau médio é o valor médio entre o salário máximo e o salário-mínimo de cada grau. Enquanto o salário em grau máximo, no que se refere?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) É o maior salário do grupo de colaboradores independente de hierarquia ou grau.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o salário máximo é o maior salário do grupo de colaboradores dependente de hierarquia ou grau; é o maior salário do grupo de colaboradores que um funcionário irá receber em determinado grau; salário máximo não é a soma do salário mínimo e médio de um mesmo colaborador em determinado grau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Refere-se ao valor máximo de salário que um colaborador irá receber em determinado grau.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque o salário em grau máximo refere-se ao valor máximo de salário que um colaborador irá receber em determinado grau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) É o menor salário do grupo de colaboradores que um funcionário irá receber em determinado grau.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o salário máximo é o maior salário do grupo de colaboradores dependente de hierarquia ou grau; é o maior salário do grupo de colaboradores que um funcionário irá receber em determinado grau; salário máximo não é a soma do salário mínimo e médio de um mesmo colaborador em determinado grau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) É a soma do salário-mínimo e médio de um mesmo colaborador em determinado grau.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o salário máximo é o maior salário do grupo de colaboradores dependente de hierarquia ou grau; é o maior salário do grupo de colaboradores que um funcionário irá receber em determinado grau; salário máximo não é a soma do salário mínimo e médio de um mesmo colaborador em determinado grau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) É a soma de salários de um mesmo agrupamento de cargos e grau.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o salário máximo é o maior salário do grupo de colaboradores dependente de hierarquia ou grau; é o maior salário do grupo de colaboradores que um funcionário irá receber em determinado grau; salário máximo não é a soma do salário mínimo e médio de um mesmo colaborador em determinado grau.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atividade 2 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 2</h2>
+                        <p>Sobre a composição do salário em um sistema de remuneração, tal é composto por parcelas salariais e não salariais. As parcelas salariais são as pagas em recompensa aos trabalhos efetuados pelo trabalhador, podendo ser efetuadas pelo empregador sob a forma de salário base e seus complementos ou por terceiros sob a forma de gorjetas. E as parcelas não salariais, no que consistem?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) São os benefícios não obrigatórios, exemplo: auxílio educação.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os benefícios não obrigatórios podem ser considerados faixas salariais, exemplo: as gorjetas; salário in natura é a forma diversa do pagamento do salário em espécie, em dinheiro, não é benefício; custos que envolvem a contratação de um colaborador na empresa são custos do setor de RH, não relacionados a parcelas salariais e não salariais; nem os incentivos fiscais em tempos de pandemia. Estes desoneram a folha de pagamento, auxiliam o caixa da organização. Não são considerados faixas salariais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) São os benefícios classificados como salário <i>in natura</i></p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os benefícios não obrigatórios podem ser considerados faixas salariais, exemplo: as gorjetas; salário in natura é a forma diversa do pagamento do salário em espécie, em dinheiro, não é benefício; custos que envolvem a contratação de um colaborador na empresa são custos do setor de RH, não relacionados a parcelas salariais e não salariais; nem os incentivos fiscais em tempos de pandemia. Estes desoneram a folha de pagamento, auxiliam o caixa da organização. Não são considerados faixas salariais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) São os custos que envolvem a contratação de um colaborador na empresa.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os benefícios não obrigatórios podem ser considerados faixas salariais, exemplo: as gorjetas; salário in natura é a forma diversa do pagamento do salário em espécie, em dinheiro, não é benefício; custos que envolvem a contratação de um colaborador na empresa são custos do setor de RH, não relacionados a parcelas salariais e não salariais; nem os incentivos fiscais em tempos de pandemia. Estes desoneram a folha de pagamento, auxiliam o caixa da organização. Não são considerados faixas salariais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Correspondem à onerosidade do contrato empregatício que se manifesta objetivamente por meio do recebimento pelo empregado de um conjunto de parcelas econômicas retributivas da prestação de serviços ou retributivas face a simples existência da relação de emprego.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque as parcelas não salariais correspondem à onerosidade do contrato empregatício se manifestando por meio do recebimento pelo empregado de um conjunto de parcelas econômicas retributivas da prestação de serviços.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) São os incentivos fiscais concedidos pelo governo federal ou estadual em tempos de pandemia.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os benefícios não obrigatórios podem ser considerados faixas salariais, exemplo: as gorjetas; salário in natura é a forma diversa do pagamento do salário em espécie, em dinheiro, não é benefício; custos que envolvem a contratação de um colaborador na empresa são custos do setor de RH, não relacionados a parcelas salariais e não salariais; nem os incentivos fiscais em tempos de pandemia. Estes desoneram a folha de pagamento, auxiliam o caixa da organização. Não são considerados faixas salariais.</p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+                            <!-- Atividade 3 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 3</h2>
+                        <p>Na abordagem sobre os adicionais ao salário, se evidenciam as modalidades mais tradicionais destes: o pagamento de horas extras; adicionais de insalubridade e periculosidade. No que consiste as horas extras?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) São as jornadas de trabalho incompletas correspondentes a prestação de serviços, podendo estas serem completadas em período posterior</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as jornadas de trabalho incompletas correspondentes à prestação de serviços, podendo estas serem completas em período posterior são consideradas horas faltantes; o valor pago ao trabalhador que esteja exposto a riscos no trabalho é denominado adicional de insalubridade; o valor pago ao trabalhador conforme tempo de empresa é adicional por tempo de serviço; e o complemento pago ao colaborador no período noturno entre 22:00 às 05:00 é denominado adicional noturno.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) É o valor extra pago ao trabalhador que esteja exposto a riscos no trabalho.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as jornadas de trabalho incompletas correspondentes à prestação de serviços, podendo estas serem completas em período posterior são consideradas horas faltantes; o valor pago ao trabalhador que esteja exposto a riscos no trabalho é denominado adicional de insalubridade; o valor pago ao trabalhador conforme tempo de empresa é adicional por tempo de serviço; e o complemento pago ao colaborador no período noturno entre 22:00 às 05:00 é denominado adicional noturno.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) É o valor extra pago ao trabalhador conforme senioridade no trabalho (tempo de empresa).</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as jornadas de trabalho incompletas correspondentes à prestação de serviços, podendo estas serem completas em período posterior são consideradas horas faltantes; o valor pago ao trabalhador que esteja exposto a riscos no trabalho é denominado adicional de insalubridade; o valor pago ao trabalhador conforme tempo de empresa é adicional por tempo de serviço; e o complemento pago ao colaborador no período noturno entre 22:00 às 05:00 é denominado adicional noturno.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Corresponde à jornada de trabalho extraordinária ou suplementar, devido à prestação de serviços além do horário normal ou comum de trabalho, acordado entre as partes.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque hora extra corresponde à jornada de trabalho extraordinária ou suplementar, devido à prestação de serviços além do horário normal, sempre sendo acordado entre as partes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Corresponde ao complemento pago ao colaborador que trabalha no período noturno, entre 22:00 e 05:00 no território brasileiro conforme CLT.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as jornadas de trabalho incompletas correspondentes à prestação de serviços, podendo estas serem completas em período posterior são consideradas horas faltantes; o valor pago ao trabalhador que esteja exposto a riscos no trabalho é denominado adicional de insalubridade; o valor pago ao trabalhador conforme tempo de empresa é adicional por tempo de serviço; e o complemento pago ao colaborador no período noturno entre 22:00 às 05:00 é denominado adicional noturno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM ATIVIDADES UNIDADE 1 -->
+    
+  </div>
+  
+  <div class="proxima-unidade">
+    <div class="container-rodape w-container">
+      <div class="linha-topo1"></div>
+      <p class="secao-titulo-rodape">Unidade Concluída</p>
+      <p class="secao-descricao">Selecione o botão &quot;Avançar&quot; para continuar.</p><a href="unidade-2.html" class="botao-home avancar w-button">Avançar</a></div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/unianchieta.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+      $('.questao-alternativa-box').click(function() {
+          $(this).toggleClass('on');
+          $($(this).find('.questao-feedback')).toggleClass('on');
+          $('.questao-alternativa-box').removeClass('on');
+          $('.questao-feedback').removeClass('on');
+          $($(this).find('.questao-feedback')).addClass('on');
+          $(this).addClass('on');
+      });
+  </script>
+  <script>
+      // When the user clicks on div, open the popup
+      function myFunction1() {var popup = document.getElementById("myPopup1"); popup.classList.toggle("show");}
+      function myFunction2() {var popup = document.getElementById("myPopup2"); popup.classList.toggle("show");}
+      function myFunction3() {var popup = document.getElementById("myPopup3"); popup.classList.toggle("show");}
+      function myFunction4() {var popup = document.getElementById("myPopup4"); popup.classList.toggle("show");}
+      function myFunction5() {var popup = document.getElementById("myPopup5"); popup.classList.toggle("show");}
+      function myFunction6() {var popup = document.getElementById("myPopup6"); popup.classList.toggle("show");}
+      function myFunction7() {var popup = document.getElementById("myPopup7"); popup.classList.toggle("show");}
+      function myFunction8() {var popup = document.getElementById("myPopup8"); popup.classList.toggle("show");}
+      function myFunction9() {var popup = document.getElementById("myPopup9"); popup.classList.toggle("show");}
+      function myFunction10() {var popup = document.getElementById("myPopup10"); popup.classList.toggle("show");}
+      function myFunction11() {var popup = document.getElementById("myPopup11"); popup.classList.toggle("show");}
+      function myFunction12() {var popup = document.getElementById("myPopup12"); popup.classList.toggle("show");}
+      function myFunction13() {var popup = document.getElementById("myPopup13"); popup.classList.toggle("show");}
+      function myFunction14() {var popup = document.getElementById("myPopup14"); popup.classList.toggle("show");}
+      function myFunction15() {var popup = document.getElementById("myPopup15"); popup.classList.toggle("show");}
+      function myFunction16() {var popup = document.getElementById("myPopup16"); popup.classList.toggle("show");}
+  </script>
+</body>
+</html>
